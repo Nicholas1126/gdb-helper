@@ -1,8 +1,8 @@
 # coding=utf-8
 
 
-from .gdb import Gdb
 from util.colors import colorize2
+from .gdb import Gdb
 
 
 def green(text):
@@ -27,6 +27,6 @@ def blue(text):
 
 class Pwndbg(Gdb):
     def __init__(self, prog, until=None):
-        prompt = red("\001pwndbg> \002")
+        prompt = "\002pwndbg> \001"  # red("\001pwndbg> \002")
         procname = "pwndbg"
         super(Pwndbg, self).__init__(prog, until, prompt, procname)

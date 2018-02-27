@@ -1,9 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='gdbhelper',
-    version='0.1',
-    packages=['gdbhelper'],
+    version='1.0',
+    packages=find_packages(),
     install_requires=[
         'pwntools',
         'psutil'
